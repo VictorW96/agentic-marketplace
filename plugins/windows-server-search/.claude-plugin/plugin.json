@@ -1,6 +1,6 @@
 {
   "name": "windows-server-search",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Search and read files on Windows file servers through their Windows Search index, and copy them into your workspace. Automatically uses the network drives already mapped on this PC (e.g. Z: -> \\\\fileserver\\share); no setup needed. Windows only.",
   "author": {
     "name": "Victor Wolf",
@@ -37,6 +37,13 @@
       "type": "string",
       "title": "Exclude servers / shares",
       "description": "Optional. Server names or UNC share paths to ignore, separated by ';'.",
+      "default": "",
+      "required": false
+    },
+    "deny_paths": {
+      "type": "string",
+      "title": "Blocked paths",
+      "description": "Optional. Wildcard patterns Claude may never search, list, read or copy, separated by ';' (e.g. \\\\fs01\\hr\\**;**\\Personal;**\\*.kdbx). IT can also block paths centrally via a .claude-policy file in each share or Group Policy.",
       "default": "",
       "required": false
     },
