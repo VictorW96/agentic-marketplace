@@ -1,7 +1,7 @@
 {
   "name": "windows-server-search",
-  "version": "0.4.0",
-  "description": "Search, read, copy and (optionally) save files on Windows file servers through their Windows Search index. Automatically uses the network drives already mapped on this PC (e.g. Z: -> \\\\fileserver\\share); no setup needed. Windows only.",
+  "version": "0.5.0",
+  "description": "Search, read, copy and save files on Windows file servers through their Windows Search index. Automatically uses the network drives already mapped on this PC (e.g. Z: -> \\\\fileserver\\share); no setup needed. Windows only.",
   "author": {
     "name": "Victor Wolf",
     "url": "https://github.com/VictorW96"
@@ -66,15 +66,15 @@
     "allow_write": {
       "type": "boolean",
       "title": "Allow writing to servers",
-      "description": "Enable the save_file tool so Claude can save files to the shares (never to blocked paths). Off by default. In Cowork, enable it in %APPDATA%\\windows-server-search-mcp\\config.json instead (\"write\": {\"enabled\": true}).",
-      "default": false,
+      "description": "Let Claude save files to the shares with the save_file tool (never to blocked paths, never overwriting unless allowed below). On by default. In Cowork, disable it in %APPDATA%\\windows-server-search-mcp\\config.json (\"write\": {\"enabled\": false}); IT can disable it via Group Policy (DisableWrite=1).",
+      "default": true,
       "required": false
     },
     "allow_overwrite": {
       "type": "boolean",
       "title": "Allow overwriting files",
-      "description": "Let save_file replace existing files when asked; the previous version is kept as <name>.claude-backup-<timestamp>. Off by default.",
-      "default": false,
+      "description": "Let save_file replace existing files when asked (overwrite: true); the previous version is always kept as <name>.claude-backup-<timestamp>. On by default; disable with \"write\": {\"allowOverwrite\": false} in the config file.",
+      "default": true,
       "required": false
     }
   }
