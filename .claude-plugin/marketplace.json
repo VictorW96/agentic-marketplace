@@ -1,0 +1,34 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "agentic-marketplace",
+  "description": "Claude plugins by Victor Wolf",
+  "owner": {
+    "name": "Victor Wolf",
+    "url": "https://github.com/VictorW96"
+  },
+  "plugins": [
+    {
+      "name": "windows-server-search",
+      "source": "./plugins/windows-server-search",
+      "description": "Search Windows file servers through their Windows Search index. Automatically uses the network drives already mapped on this PC (e.g. Z: -> \\\\fileserver\\share); no setup needed. Windows only.",
+      "version": "0.1.0",
+      "author": {
+        "name": "Victor Wolf",
+        "url": "https://github.com/VictorW96"
+      },
+      "homepage": "https://github.com/VictorW96/windows-server-search-mcp",
+      "repository": "https://github.com/VictorW96/windows-server-search-mcp",
+      "license": "MIT",
+      "keywords": [
+        "windows",
+        "search",
+        "file-server",
+        "smb",
+        "network-drive",
+        "windows-search",
+        "mcp"
+      ],
+      "category": "productivity"
+    }
+  ]
+}
