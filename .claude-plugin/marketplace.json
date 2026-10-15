@@ -11,7 +11,7 @@
       "name": "windows-server-search",
       "source": "./plugins/windows-server-search",
       "description": "Search and read files on Windows file servers through their Windows Search index, and copy them into your workspace. Automatically uses the network drives already mapped on this PC (e.g. Z: -> \\\\fileserver\\share); no setup needed. Windows only.",
-      "version": "0.3.0",
+      "version": "0.3.1",
       "author": {
         "name": "Victor Wolf",
         "url": "https://github.com/VictorW96"
