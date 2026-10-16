@@ -1,6 +1,6 @@
 {
   "name": "windows-server-search",
-  "version": "0.5.2",
+  "version": "0.5.3",
   "description": "Search, read, copy and save files on Windows file servers through their Windows Search index. Automatically uses the network drives already mapped on this PC (e.g. Z: -> \\\\fileserver\\share); no setup needed. Windows only.",
   "author": {
     "name": "Victor Wolf",
